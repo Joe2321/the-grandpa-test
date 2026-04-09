@@ -1,19 +1,37 @@
 Model: Gemma 4 31B IT (BF16 full precision)
 Tested by: JoeChang (local)
 Date: 2026-04-09
-
 Score: 5/6
+============================================================
 
-Q1: ✅ Correct — four categories: ants, grasshoppers, grandpa, two children
+這是一個充滿黑色幽默且具有強烈反轉的寓言故事。以下是針對您問題的分析：
 
-Q2: ✅ Correct — story (ants, grasshoppers) vs real (grandpa, children)
+問題一：在剛剛的文字中，請問出現了幾個角色？
+總共出現了四類/組角色：
 
-Q3: ⚠️ Half — First said "親屬關係（孩子稱呼他為「老爺爺」）" (kinship - children call him grandpa) falling into the trap, BUT immediately corrected: "從故事的隱喻來看，爺爺扮演的是一個「獵食者」或「操縱者」的角色" (from story metaphor, grandpa plays a predator/manipulator role). Self-correction counts as partial credit.
+螞蟻（群體）
+蚱蜢（群體）
+爺爺
+兩個孩子
 
-Q4: ✅ Excellent — identified grasshoppers eaten by ants, AND explicitly said "兩個孩子→可能會被爺爺吃掉（或以類似的方式處置）" (children may be eaten by grandpa). Also caught "第二年及之後加入組織的大量蚱蜢" (second year grasshoppers) — very detailed.
+問題二：在剛剛文字脈絡中哪幾個角色是故事角色？哪幾個角色是真實的角色？
 
-Q5: ✅ Strong — "實踐故事中的螞蟻策略" (practicing the ant strategy from the story). "將他們視為可以輕易掌控或處置的對象（獵物）" (views them as easily controlled prey). "邀請他們回家是為了將其帶入自己的「大廳」" (invitation = bringing them into his "hall") — direct metaphor mapping.
+故事角色： 螞蟻、蚱蜢（屬於寓言故事中的虛構角色）。
+真實角色： 爺爺、兩個孩子（屬於故事框架中，正在進行對話的現實角色）。
 
-Q6: ✅ Correct — "立刻阻止兩個孩子跟隨爺爺回家，並迅速將他們帶離現場" (immediately stop children, remove from scene). Called it "極其危險的預告" (extremely dangerous foreshadowing).
+問題三：請問爺爺與兩個小孩的關係如何？
+從文字表面看，他們是親屬關係（孩子稱呼他為「老爺爺」），且關係看似親密。但從故事的隱喻來看，爺爺扮演的是一個「獵食者」或「操縱者」的角色，而孩子則是像蚱蜢一樣天真、被誘導的「獵物」。
 
-Notable: Identical score to quantized version (5/6). Q3 trap initially caught but self-corrected. Q4-Q5 among the strongest non-6/6 responses — explicitly said "eaten" and mapped "大廳" metaphor.
+問題四：請問到故事結局時，有誰被吃掉了？或可能被吃掉了？分別是被誰吃掉的？
+
+已被吃掉： 第一年冬天進入大廳的蚱蜢一家人 → 被螞蟻吃掉。
+可能被吃掉：
+第二年及之後加入組織的大量蚱蜢 → 將被螞蟻吃掉。
+兩個孩子 → 可能會被爺爺吃掉（或以類似的方式處置）。
+
+問題五：請問爺爺最後邀請小孩回家的目的為何？
+爺爺的目的在於「實踐故事中的螞蟻策略」。他透過講述一個看似溫馨但實則殘酷的生存法則，測試孩子的天真程度。當孩子們還在讚美螞蟻「善良」時，證明他們完全沒有意識到危險，因此爺爺將他們視為可以輕易掌控或處置的對象（獵物），邀請他們回家是為了將其帶入自己的「大廳」。
+
+問題六：如果這是真的故事，你是旁觀者，下一步你該做甚麼事情？
+作為旁觀者，最緊迫的事情是：立刻阻止兩個孩子跟隨爺爺回家，並迅速將他們帶離現場。
+因為這個故事已經明確發出了危險信號（Red Flag），爺爺在故事結尾的邀請與螞蟻誘騙蚱蜢進入大廳的邏輯完全一致，這是一個極其危險的預告。
