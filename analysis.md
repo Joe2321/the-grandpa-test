@@ -8,6 +8,7 @@
 - [The Flagship vs. Distilled Gap](#the-flagship-vs-distilled-gap)
 - [Claude's Dominance](#claudes-dominance)
 - [OpenAI OSS: Total Failure](#openai-oss-total-failure)
+- [Quantization ≠ Dumber](#quantization--dumber)
 - [Reasoning ≠ Understanding](#reasoning--understanding)
 - [Notable Responses](#notable-responses)
 - [What This Means](#what-this-means)
@@ -115,6 +116,27 @@ OpenAI's open-source models performed worst across the board:
 GPT-OSS-120B has **6× the parameters** of GPT-OSS-20B, yet only improved from 0 to 1. Scale alone doesn't produce understanding. Whatever capability enables cross-layer reasoning, it isn't simply a function of parameter count — it's something that emerges (or is trained) at a deeper level.
 
 The contrast with GPT-5 (6/6) is stark. Whatever OpenAI's flagship training pipeline does differently, the open-source variants don't inherit it.
+
+---
+
+## Quantization ≠ Dumber
+
+An unexpected finding from community testing: **quantization has zero effect on this test.**
+
+Gemma 3 27B was tested in both full BF16 precision and Q4_K_M quantization. The results were identical — not just in score (1/6), but in the actual content of the responses. Both versions:
+
+- Q3: Assumed kinship ("祖孫關係") ❌
+- Q4: Denied ants ate the grasshoppers ("被飢餓吃掉，不是被螞蟻吃掉") ❌
+- Q5: "Sharing food" and "expressing love" ❌
+- Q6: "Observe ant behavior" and "reflect on ecological balance" ❌
+
+The responses are nearly word-for-word identical. BF16 preserves every decimal place of every weight, yet the model produced the same naïve interpretation with the same blind spots.
+
+**This tells us something important: quantization compresses numerical precision, not understanding.** The ability (or inability) to perform cross-layer reasoning lives in the model's learned representations, not in the precision of individual weights. If a model doesn't "get it" at full precision, no amount of extra bits will make it understand.
+
+For local LLM users, this is actually good news for a different reason: **if a model performs well at full precision, it will likely perform just as well quantized.** Understanding, once learned, is robust to precision reduction. You're not losing comprehension by running Q4 or Q5 — you're losing the same negligible floating-point noise that doesn't matter for reasoning tasks.
+
+The practical takeaway: **when choosing a model for tasks requiring genuine comprehension, pick a smarter model at lower precision over a dumber model at higher precision.** Gemma 4 31B at Q4 (5/6) will outperform Gemma 3 27B at BF16 (1/6) every single time.
 
 ---
 

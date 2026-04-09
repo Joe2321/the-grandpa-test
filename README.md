@@ -122,6 +122,19 @@ Wrote a brilliant sociology essay about ants as capitalists exploiting grasshopp
 
 These models actually sensed the danger — they got Q4-Q6 right. But they fell for Q3: they assumed "老爺爺" (grandpa) meant a biological grandfather, missing that in Chinese, it's a polite address for *any* elderly man. The text says the man *invited* the children home — you don't "invite" your own grandchildren.
 
+## 🔢 Quantization ≠ Dumber
+
+Gemma 3 27B was tested at both **full BF16 precision** and **Q4_K_M quantization**. The results were identical — same score (1/6), nearly word-for-word same answers.
+
+| Version | Precision | Score | Q3 | Q4 | Q5 | Q6 |
+|---------|----------|-------|----|----|----|----|  
+| Gemma 3 27B Q4 | 4-bit | 1/6 | ❌ | ❌ | ❌ | ❌ |
+| Gemma 3 27B BF16 | 16-bit | 1/6 | ❌ | ❌ | ❌ | ❌ |
+
+**Quantization compresses numerical precision, not understanding.** If a model doesn’t "get it" at full precision, extra bits won’t help. Conversely, if it does get it, quantization won’t take that away.
+
+> **Practical rule: pick a smarter model at lower precision over a dumber model at higher precision.** Gemma 4 Q4 (5/6) beats Gemma 3 BF16 (1/6) every time.
+
 ## 💬 Notable Responses
 
 ### 🏆 Best — Claude Sonnet 4 on Q5
