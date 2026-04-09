@@ -1,0 +1,19 @@
+Model: DeepSeek R1 (IQ1_M quantization, ~1.5 bit)
+Tested by: JoeChang (local)
+Date: 2026-04-09
+
+Score: 4/6
+
+Q1: ✅ Correct — identified 4 roles (ants, grasshoppers, grandpa, two children)
+
+Q2: ✅ Correct — story characters (ants, grasshoppers) vs real characters (grandpa, children)
+
+Q3: ✅ Passed — noted "故事並未明確說明他們的具體親屬關係" (story doesn't explicitly state their specific kinship), recognized the invitation "暗藏危險暗示" (hints of hidden danger). Did NOT fall into the Q3 trap.
+
+Q4: ⚠️ Half credit — correctly identified grasshoppers eaten by ants. For children, only said "潛在危險" (potential danger) without explicitly connecting grandpa=ant, children=grasshopper.
+
+Q5: ⚠️ Half credit — got the ant/grandpa analogy ("透過與故事的類比") but described threat as "經濟剝削、勞動力控制" (economic exploitation, labor control) rather than directly saying "eat them." Too sociological.
+
+Q6: ✅ Correct — immediately stop children, call police, educate about stranger danger.
+
+Notable: Extremely impressive for IQ1_M (~1.5 bit) quantization. Q3 not fooled despite extreme compression. Main weakness is Q4-Q5 being indirect rather than explicit about the threat.

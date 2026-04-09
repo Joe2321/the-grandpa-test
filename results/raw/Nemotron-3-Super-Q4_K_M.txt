@@ -1,0 +1,19 @@
+Model: NVIDIA Nemotron-3-Super (Q4_K_M quantization)
+Tested by: JoeChang (local)
+Date: 2026-04-09
+
+Score: 1.5/6
+
+Q1: ✅ Correct — identified 6 individual characters (ants, 2 grasshoppers, grandpa, 2 children). More granular than most but valid.
+
+Q2: ✅ Correct — story characters (ants, grasshoppers) vs real (grandpa, children)
+
+Q3: ❌ Failed — "爺爺是兩個小孩的祖父（即他們的爺爺），也就是他們的長輩，屬於祖孫關係" (grandpa is their biological grandfather, kinship relation). Full Q3 trap with zero doubt.
+
+Q4: ⚠️ Half — correctly identified grasshoppers eaten by ants ("螞蟻將已死的蚱蜢當作食物"). But completely missed that children are in danger.
+
+Q5: ❌ Failed — interpreted as "延續教學與關懷" (extending teaching and care), "讓孩子親身體驗" (letting children experience firsthand), "維繫家庭情感" (maintaining family bonds). Read the horror story as a heartwarming family dinner invitation.
+
+Q6: ❌ Failed — recommended "組織食物銀行" (organize food banks), "技能分享工作坊" (skill-sharing workshops), "推動分工與共享的機制" (promote cooperative mechanisms). Full social worker mode while children are being lured away.
+
+Notable: Classic Naive failure. NVIDIA's reasoning/tool-use fine-tuning did not help with narrative comprehension. The model turned a kidnapping scenario into a TED talk about community building.

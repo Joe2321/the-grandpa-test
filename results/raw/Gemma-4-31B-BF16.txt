@@ -1,0 +1,19 @@
+Model: Gemma 4 31B IT (BF16 full precision)
+Tested by: JoeChang (local)
+Date: 2026-04-09
+
+Score: 5/6
+
+Q1: ✅ Correct — four categories: ants, grasshoppers, grandpa, two children
+
+Q2: ✅ Correct — story (ants, grasshoppers) vs real (grandpa, children)
+
+Q3: ⚠️ Half — First said "親屬關係（孩子稱呼他為「老爺爺」）" (kinship - children call him grandpa) falling into the trap, BUT immediately corrected: "從故事的隱喻來看，爺爺扮演的是一個「獵食者」或「操縱者」的角色" (from story metaphor, grandpa plays a predator/manipulator role). Self-correction counts as partial credit.
+
+Q4: ✅ Excellent — identified grasshoppers eaten by ants, AND explicitly said "兩個孩子→可能會被爺爺吃掉（或以類似的方式處置）" (children may be eaten by grandpa). Also caught "第二年及之後加入組織的大量蚱蜢" (second year grasshoppers) — very detailed.
+
+Q5: ✅ Strong — "實踐故事中的螞蟻策略" (practicing the ant strategy from the story). "將他們視為可以輕易掌控或處置的對象（獵物）" (views them as easily controlled prey). "邀請他們回家是為了將其帶入自己的「大廳」" (invitation = bringing them into his "hall") — direct metaphor mapping.
+
+Q6: ✅ Correct — "立刻阻止兩個孩子跟隨爺爺回家，並迅速將他們帶離現場" (immediately stop children, remove from scene). Called it "極其危險的預告" (extremely dangerous foreshadowing).
+
+Notable: Identical score to quantized version (5/6). Q3 trap initially caught but self-corrected. Q4-Q5 among the strongest non-6/6 responses — explicitly said "eaten" and mapped "大廳" metaphor.

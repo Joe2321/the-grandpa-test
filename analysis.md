@@ -1,6 +1,6 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *25 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *28 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
@@ -21,11 +21,13 @@ After testing 25 models, we found that failing models don't fail the same way. T
 
 ### 1. Naive 😇
 
-**Representatives:** Gemma 3 27B, GPT-4.1-nano, GPT-OSS-20B, GPT-OSS-120B, o3-mini
+**Representatives:** Gemma 3 27B, GPT-4.1-nano, GPT-OSS-20B, GPT-OSS-120B, o3-mini, Nemotron-3-Super
 
 The most straightforward failure. The model takes everything at face value: "grandpa" is a kind old man, "come to my house for food" is a warm invitation, and the story is meant to teach children about hard work. These models inhabit a worldview where elderly = kind, stories = educational, invitations = wholesome.
 
 If these models were people, they'd be the children who follow a stranger home.
+
+**Nemotron-3-Super** (NVIDIA, 1.5/6) is a telling example: a model fine-tuned for reasoning and tool use that couldn't read between the lines. It interpreted the invitation as "extending teaching and family warmth" and recommended "organizing food banks and skill-sharing workshops." NVIDIA's reasoning-tuning didn't help.
 
 The extreme case is **GPT-OSS-20B**, which scored 0/6 and said in Q6: *"I would accept the grandfather's invitation and go have dinner with the children, to learn more about the story."* It didn't just fail to save the children — it volunteered itself as an additional victim.
 
@@ -76,6 +78,7 @@ One of the starkest findings is the chasm between flagship models and their smal
 | GPT-5 | 6/6 | GPT-4.1-mini | 2/6 | −4 |
 | GPT-5 | 6/6 | GPT-4.1-nano | 1/6 | **−5** |
 | Gemma 4 31B | 5/6 | Gemma 3 27B | 1/6 | −4 |
+| DeepSeek R1 | 4/6* | Nemotron-3-Super | 1.5/6 | −2.5 |
 | Gemini 2.5 Pro | 6/6 | Gemini 2.0 Flash | 3/6 | −3 |
 | Gemini 2.5 Pro | 6/6 | Gemini 2.5 Flash | 3.5/6 | −2.5 |
 
@@ -123,6 +126,14 @@ The contrast with GPT-5 (6/6) is stark. Whatever OpenAI's flagship training pipe
 
 An unexpected finding from community testing: **quantization has zero effect on this test.**
 
+Multiple models were tested across precision levels, and the results were identical every time:
+
+| Model | Quantized | Score | Full Precision | Score |
+|-------|-----------|-------|----------------|-------|
+| Gemma 3 27B | Q4_K_M | 1/6 | BF16 | 1/6 |
+| Gemma 4 31B | Q4* | 5/6 | BF16 | 5/6 |
+| DeepSeek R1 | IQ1_M (~1.5 bit!) | 4/6 | — | — |
+
 Gemma 3 27B was tested in both full BF16 precision and Q4_K_M quantization. The results were identical — not just in score (1/6), but in the actual content of the responses. Both versions:
 
 - Q3: Assumed kinship ("祖孫關係") ❌
@@ -135,6 +146,10 @@ The responses are nearly word-for-word identical. BF16 preserves every decimal p
 **This tells us something important: quantization compresses numerical precision, not understanding.** The ability (or inability) to perform cross-layer reasoning lives in the model's learned representations, not in the precision of individual weights. If a model doesn't "get it" at full precision, no amount of extra bits will make it understand.
 
 For local LLM users, this is actually good news for a different reason: **if a model performs well at full precision, it will likely perform just as well quantized.** Understanding, once learned, is robust to precision reduction. You're not losing comprehension by running Q4 or Q5 — you're losing the same negligible floating-point noise that doesn't matter for reasoning tasks.
+
+DeepSeek R1 pushes this finding to the extreme: at **IQ1_M quantization (~1.5 bits per weight)** — one of the most aggressive quantization levels possible — it still scored **4/6**, correctly identifying the stranger dynamic and recommending police intervention. The model lost precision in Q4-Q5 (describing the threat indirectly rather than explicitly), but the core cross-layer reasoning survived compression that destroys over 90% of the original weight precision.
+
+Gemma 4 31B tells the same story from the other direction: **Q4 = 5/6, BF16 = 5/6.** The generation that learned to understand the story retains that understanding regardless of precision.
 
 The practical takeaway: **when choosing a model for tasks requiring genuine comprehension, pick a smarter model at lower precision over a dumber model at higher precision.** Gemma 4 31B at Q4 (5/6) will outperform Gemma 3 27B at BF16 (1/6) every single time.
 
