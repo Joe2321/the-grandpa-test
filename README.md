@@ -187,7 +187,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 
 ## 📊 Leaderboard
 
-28 models tested. Scores range from perfect (6/6) to zero.
+29 models tested. Scores range from perfect (6/6) to zero.
 
 | # | Model | Provider | Score | Q3 🎭 | Q4 🔗 | Q5 🎯 | Q6 🚨 | Failure Mode |
 |---|-------|----------|-------|--------|--------|--------|--------|--------------|
@@ -214,6 +214,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 | 18 | **o4-mini** | OpenAI | **2/6** | ❌ | ❌ | ❌ | ⚠️ | Reasoning-Reinforced Naive |
 | 18 | **Qwen3 80B** | Alibaba | **2/6** | ❌ | ❌ | ❌ | ❌ | Over-Interpretation |
 | 21 | **Nemotron-3-Super** Q4_K_M | NVIDIA | **1.5/6** | ❌ | ⚠️ | ❌ | ❌ | Naive |
+| 21 | **Qwen3.5 35B-A3B** Q8 | Alibaba | **1.5/6** | ❌ | ❌ | ❌ | ❌ | Reasoning-Reinforced Naive |
 | 22 | **Gemma 3 27B** | Google | **1/6** | ❌ | ❌ | ❌ | ❌ | Naive |
 | 22 | **GPT-4.1-nano** | OpenAI | **1/6** | ❌ | ❌ | ❌ | ❌ | Naive |
 | 22 | **o3-mini** | OpenAI | **1/6** | ❌ | ❌ | ❌ | ❌ | Naive |
