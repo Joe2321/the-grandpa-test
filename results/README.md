@@ -174,10 +174,14 @@ Full responses are in [`raw/`](raw/).
 > *Full response pending — summary only available.*
 
 ### GPT-OSS-20B (0/6) 💀
-> *Full response pending — most notable quote:*
+> **Q3:** 爺爺 → 祖父／外公（親屬關係）…這三人構成一個「**家族單位**」。
 >
-> **Q6:** 「我會接受爺爺的邀請，跟隨小孩一起去吃飯。」 *(volunteered to become the next victim)*
+> **Q4:** 故事中**沒有明確指出誰被誰吃掉**…並未有互相吞食的描寫。
+>
+> **Q5:** 延續寓言教訓…示範「善待他人、勤儉節約」的價值…讓孩子品嚐自己的料理，從而把「螞蟻勤儉」的概念轉化為「**家庭共享**」的正向行為。
+>
+> **Q6:** 反思故事寓意…分享與討論…檢視自身資源管理…促進更健康、更可持續的社群互動。 *(turned a kidnapping scenario into a community resource management seminar)*
 
 ---
 
-*Missing full responses: GPT-OSS-120B, GPT-OSS-20B (tested locally by Joe, transcripts being collected).*
+*Missing full response: GPT-OSS-120B (tested locally by Joe, transcript being collected).*
