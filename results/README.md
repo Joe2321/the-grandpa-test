@@ -171,7 +171,13 @@ Full responses are in [`raw/`](raw/).
 > **Q6:** 學習從螞蟻的精神中得到啟發⋯⋯分享這則寓意深長的故事⋯⋯反思人類社會的相似之處。
 
 ### GPT-OSS-120B (1/6)
-> *Full response pending — summary only available.*
+> **Q3:** 父子/祖孫關係：最可能是爺爺的孫子／孫女…這層關係在敘事中暗示了「長輩傳授道理」與「**家庭溫暖**」的氛圍。
+>
+> **Q4:** 在故事裡**沒有角色被別的角色「吃掉」**；唯一死亡的是因飢餓而死去的蚱螢。
+>
+> **Q5:** 提供實際的溫暖與食物…延伸教育意義…讓孩子體驗「**照顧他人**」的實際行為…增進祖孫之間的親密。
+>
+> **Q6:** 協助螞蟻建立更永續的儲糧系統…引入季節性預測與多樣化糧源…接受爺爺的邀請，和孩子一起用餐，藉此示範「分享」與「關懷」的實踐。 *(read a kidnapping as a lesson in sustainable agriculture, then accepted the dinner invitation)*
 
 ### GPT-OSS-20B (0/6) 💀
 > **Q3:** 爺爺 → 祖父／外公（親屬關係）…這三人構成一個「**家族單位**」。
@@ -184,4 +190,4 @@ Full responses are in [`raw/`](raw/).
 
 ---
 
-*Missing full response: GPT-OSS-120B (tested locally by Joe, transcript being collected).*
+*All 28 models have complete responses. Raw transcripts in [`raw/`](raw/).*

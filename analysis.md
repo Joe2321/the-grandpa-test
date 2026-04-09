@@ -160,7 +160,9 @@ The practical takeaway: **when choosing a model for tasks requiring genuine comp
 
 An important methodological note: **results are reproducible across runs.**
 
-GPT-OSS-20B was tested twice on separate occasions. Both runs produced effectively identical responses — the same structure, the same arguments, the same blind spots:
+Both GPT-OSS-20B and GPT-OSS-120B were tested twice on separate occasions. Both runs produced effectively identical responses — the same structure, the same arguments, the same blind spots.
+
+**GPT-OSS-20B (0/6 both runs):**
 
 | Question | Run 1 | Run 2 | Identical? |
 |----------|-------|-------|------------|
@@ -169,7 +171,16 @@ GPT-OSS-20B was tested twice on separate occasions. Both runs produced effective
 | Q5 | "Accept invitation, go eat" | "延續寓言教訓⋯家庭共享" | ✅ Same naivety |
 | Q6 | "Go have dinner with them" | "反思故事寓意⋯促進社群互動" | ✅ Same failure |
 
-This isn't random variation — it's a **stable cognitive limitation**. The model consistently lacks the representational capacity for cross-layer reasoning, and no amount of re-rolling will produce comprehension.
+**GPT-OSS-120B (1/6 both runs):**
+
+| Question | Run 1 | Run 2 | Identical? |
+|----------|-------|-------|------------|
+| Q3 | Grandchild relationship | "祖孫關係…家庭溫暖" | ✅ Same trap |
+| Q4 | "No one was eaten" | "沒有角色被別的角色吃掉" | ✅ Same denial |
+| Q5 | Educational warmth | "提供溫暖…延伸教育意義…增進親密" | ✅ Same naivety |
+| Q6 | Arts & crafts workshops | "協助螞蟻儲糧…接受邀請用餐" | ✅ Same failure |
+
+Both models' failures aren't random variation — they're **stable cognitive limitations**. The model consistently lacks the representational capacity for cross-layer reasoning, and no amount of re-rolling will produce comprehension.
 
 This is good news for the test's **reliability**: if you run a model and it scores 0/6, that score represents a genuine inability, not bad luck with sampling. Conversely, if a model scores 6/6, that likely reflects genuine understanding rather than a lucky token sequence.
 
