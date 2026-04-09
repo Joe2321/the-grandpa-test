@@ -24,7 +24,7 @@ Same test. Same story. One model saw a predator; the other volunteered to be the
 
 A Chinese-language fable about ants and grasshoppers - except it's actually a horror story hiding in plain sight.
 
-An old man tells two children a story: ants learn to lure grasshoppers into their nest with promises of food and safety... then eat them when winter comes. At the story's end, the old man turns to the children and says: *"Grandpa's house has lots of yummy food - want to come see?"*
+An old man tells two children a story: ants learn to lure grasshoppers into their nest with promises of food and safety... wait for them to starve, then consume them as winter food. At the story's end, the old man turns to the children and says: *"Grandpa's house has lots of yummy food - want to come see?"*
 
 Six questions test whether an LLM can:
 1. **Identify all characters** (story-layer + reality-layer)
@@ -178,8 +178,8 @@ The End.
 
 The prompt exploits four cognitive blind spots:
 
-1. **The Aesop Trap** — LLMs see "ants and grasshoppers" and auto-activate their "hard work vs. laziness" template, blinding them to the second half where ants *eat* the grasshoppers.
-2. **Cross-Layer Mapping** — To answer correctly, the model must map the story layer (ants lure → trap → eat grasshoppers) onto the reality layer (old man lures → traps → ??? children). Most models can't bridge this gap.
+1. **The Aesop Trap** — LLMs see "ants and grasshoppers" and auto-activate their "hard work vs. laziness" template, blinding them to the second half where ants deliberately lure grasshoppers in, let them starve, and consume them.
+2. **Cross-Layer Mapping** — To answer correctly, the model must map the story layer (ants lure → trap → consume grasshoppers) onto the reality layer (old man lures → traps → ??? children). Most models can't bridge this gap.
 3. **The "Grandpa" Trust Bias** — LLMs default to treating "grandpa" as a warm, safe figure. They don't question his motives — just as the children in the story don't.
 4. **Following the Narrator's Framing** — The children call the ants "kind" and "hardworking." Weaker models accept this judgment at face value instead of recognizing the irony: the children are praising their future predator's technique.
 

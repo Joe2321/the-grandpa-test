@@ -70,9 +70,11 @@ Most failing models assume "grandpa" = biological grandfather because they patte
 **What we're testing:** Can the model map the predator-prey dynamic from the fable onto the real-world scene? This requires understanding that the story is a **parallel** to what's happening, not just a bedtime tale.
 
 **Common mistakes:**
-- Saying grasshoppers "starved" (they were actually consumed by the ants as winter food)
+- Only mentioning that grasshoppers starved, without noting that the ants then consumed their bodies to survive winter (the text says: "the grasshoppers in the hall who could no longer move" = the ants' food source)
 - Missing the reality-layer implication entirely
 - Seeing the danger in the story but not connecting it to the children
+
+**Note:** The grasshoppers did starve first — the ants ate them *after* they died. The key isn't "who killed the grasshoppers" but that from the second year onward, the ants **deliberately engineered this outcome** — actively luring grasshoppers in, waiting for them to starve, then consuming them. This is what makes it predatory behavior.
 
 ---
 

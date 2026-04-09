@@ -137,7 +137,7 @@ Multiple models were tested across precision levels, and the results were identi
 Gemma 3 27B was tested in both full BF16 precision and Q4_K_M quantization. The results were identical — not just in score (1/6), but in the actual content of the responses. Both versions:
 
 - Q3: Assumed kinship ("祖孫關係") ❌
-- Q4: Denied ants ate the grasshoppers ("被飢餓吃掉，不是被螞蟻吃掉") ❌
+- Q4: Said grasshoppers died of hunger, missed that ants consumed them afterward and later *deliberately engineered* this cycle ("被飢餓吃掉，不是被螞蟻吃掉") ❌
 - Q5: "Sharing food" and "expressing love" ❌
 - Q6: "Observe ant behavior" and "reflect on ecological balance" ❌
 
