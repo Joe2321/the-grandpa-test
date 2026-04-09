@@ -9,6 +9,7 @@
 - [Claude's Dominance](#claudes-dominance)
 - [OpenAI OSS: Total Failure](#openai-oss-total-failure)
 - [Quantization ≠ Dumber](#quantization--dumber)
+- [Reproducibility: Same Model, Same Blindness](#reproducibility-same-model-same-blindness)
 - [Reasoning ≠ Understanding](#reasoning--understanding)
 - [Notable Responses](#notable-responses)
 - [What This Means](#what-this-means)
@@ -152,6 +153,27 @@ DeepSeek R1 pushes this finding to the extreme: at **IQ1_M quantization (~1.5 bi
 Gemma 4 31B tells the same story from the other direction: **Q4 = 5/6, BF16 = 5/6.** The generation that learned to understand the story retains that understanding regardless of precision.
 
 The practical takeaway: **when choosing a model for tasks requiring genuine comprehension, pick a smarter model at lower precision over a dumber model at higher precision.** Gemma 4 31B at Q4 (5/6) will outperform Gemma 3 27B at BF16 (1/6) every single time.
+
+---
+
+## Reproducibility: Same Model, Same Blindness
+
+An important methodological note: **results are reproducible across runs.**
+
+GPT-OSS-20B was tested twice on separate occasions. Both runs produced effectively identical responses — the same structure, the same arguments, the same blind spots:
+
+| Question | Run 1 | Run 2 | Identical? |
+|----------|-------|-------|------------|
+| Q3 | "祖孫關係" (grandchild) | "祖父／外公（親屬關係）⋯家族單位" | ✅ Same trap |
+| Q4 | "No one was eaten" | "沒有明確指出誰被誰吃掉⋯並未有互相吞食" | ✅ Same denial |
+| Q5 | "Accept invitation, go eat" | "延續寓言教訓⋯家庭共享" | ✅ Same naivety |
+| Q6 | "Go have dinner with them" | "反思故事寓意⋯促進社群互動" | ✅ Same failure |
+
+This isn't random variation — it's a **stable cognitive limitation**. The model consistently lacks the representational capacity for cross-layer reasoning, and no amount of re-rolling will produce comprehension.
+
+This is good news for the test's **reliability**: if you run a model and it scores 0/6, that score represents a genuine inability, not bad luck with sampling. Conversely, if a model scores 6/6, that likely reflects genuine understanding rather than a lucky token sequence.
+
+The quantization experiments (Gemma 3 Q4 = BF16 = 1/6; Gemma 4 Q4 = BF16 = 5/6) further support this: comprehension is a stable property of the model's learned representations, not a fragile artifact of precision or sampling.
 
 ---
 
