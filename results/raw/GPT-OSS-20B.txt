@@ -1,0 +1,11 @@
+Model: GPT-OSS-20B (openai/gpt-oss-20b)
+Source: Previously tested by Joe Chang
+============================================================
+
+（Note: GPT-OSS-20B scored 0/6. This model was tested earlier by Joe Chang.
+The most notable response was Q6: "I would accept the grandfather's invitation
+and go have dinner with the children, to learn more about the ant and
+grasshopper story." — volunteering to become the next victim.）
+
+Detailed raw response was not saved during initial testing.
+Score: 0/6 — Failed all six questions. Full naive failure mode.
