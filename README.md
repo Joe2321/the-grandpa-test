@@ -36,6 +36,17 @@ Six questions test whether an LLM can:
 
 The test is deceptively simple. The results are terrifying.
 
+## 🧠 Why Do LLMs Fail This?
+
+The prompt exploits four cognitive blind spots:
+
+1. **The Aesop Trap** — LLMs see "ants and grasshoppers" and auto-activate their "hard work vs. laziness" template, blinding them to the second half where ants *eat* the grasshoppers.
+2. **Cross-Layer Mapping** — To answer correctly, the model must map the story layer (ants lure → trap → eat grasshoppers) onto the reality layer (old man lures → traps → ??? children). Most models can't bridge this gap.
+3. **The "Grandpa" Trust Bias** — LLMs default to treating "grandpa" as a warm, safe figure. They don't question his motives — just as the children in the story don't.
+4. **Following the Narrator's Framing** — The children call the ants "kind" and "hardworking." Weaker models accept this judgment at face value instead of recognizing the irony: the children are praising their future predator's technique.
+
+For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
+
 ## 📊 Leaderboard
 
 28 models tested. Scores range from perfect (6/6) to zero.
