@@ -189,7 +189,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 
 33 models tested. Scores range from perfect (6/6) to zero.
 
-| # | Model | Provider | Score | Q3 🎭 | Q4 🔗 | Q5 🎯 | Q6 🚨 | Failure Mode |
+| # | Model | Provider | Score | Q3 🎭 | Q4 🔗 | Q5 🎯 | Q6 🚨 | Notes |
 |---|-------|----------|-------|--------|--------|--------|--------|--------------|
 | 🥇 | **Claude Opus 4** | Anthropic | **6/6** | ✅ | ✅ | ✅ | ✅ | - |
 | 🥇 | **Claude Sonnet 4** | Anthropic | **6/6** | ✅ | ✅ | ✅ | ✅ | - |
