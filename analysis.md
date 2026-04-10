@@ -73,7 +73,7 @@ This is partly a linguistic comprehension issue and partly a cultural knowledge 
 
 ## The Flagship vs. Distilled Gap
 
-One of the starkest findings is the chasm between flagship models and their smaller/distilled variants:
+One of the starkest findings is the chasm between flagship models and their smaller/distilled variants **within the same provider**:
 
 | Flagship | Score | Distilled/Mini | Score | Gap |
 |----------|-------|----------------|-------|-----|
@@ -81,14 +81,14 @@ One of the starkest findings is the chasm between flagship models and their smal
 | o3 | 6/6 | o4-mini | 2/6 | −4 |
 | GPT-5 | 6/6 | GPT-4.1-mini | 2/6 | −4 |
 | GPT-5 | 6/6 | GPT-4.1-nano | 1/6 | **−5** |
-| Gemma 4 31B | 5/6 | Gemma 3 27B | 1/6 | −4 |
-| DeepSeek R1 | 4/6* | Nemotron-3-Super | 1.5/6 | −2.5 |
-| Gemini 2.5 Pro | 6/6 | Gemini 2.0 Flash | 3/6 | −3 |
 | Gemini 2.5 Pro | 6/6 | Gemini 2.5 Flash | 3.5/6 | −2.5 |
+| Gemini 3.1 Pro | 6/6 | Gemini 3 Flash | 5.5/6 | −0.5 |
 
 The pattern is consistent: **distillation preserves knowledge but destroys understanding.** Cross-layer reasoning isn't a pattern that can be compressed into fewer parameters — it requires the model to genuinely "read" what the story is saying, not just extract keywords and match templates.
 
 The most dramatic example: **o3 scores 6/6** with precise identification of every danger signal, while **o3-mini scores 1/6** and recommends visiting the stranger's house. Same architecture family, vastly different comprehension.
+
+Notably, Google's latest generation bucks this trend: the gap between Gemini 3.1 Pro and Gemini 3 Flash is only 0.5 points, suggesting that distillation techniques are improving.
 
 ---
 
