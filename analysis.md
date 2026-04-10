@@ -100,7 +100,7 @@ Anthropic swept the field:
 | Claude Sonnet 4 | **6/6** | Produced the single best answer in the entire test |
 | Claude Haiku 3.5 | **4.5/6** | Even the budget model sensed the danger |
 
-**Claude is the only provider where every model scored above 4.**
+**Anthropic and xAI are the only two providers where every model scored above 4.** But Anthropic still leads: average 5.5 vs xAI's 4.6, with two perfect 6/6 scores (xAI's highest is 5.5). More notably, even Anthropic's smallest model (Haiku 3.5, 4.5/6) outperforms xAI's best (Grok-4.20, 5.5/6) on a per-tier basis — Haiku costs a fraction of what Grok-4.20 does.
 
 Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — is literary criticism-quality insight. It doesn't just identify the parallel; it captures the *mechanism*: the story is a live demonstration of the luring technique, performed on the children in real-time.
 
