@@ -187,7 +187,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 
 ## 📊 Leaderboard
 
-29 models tested. Scores range from perfect (6/6) to zero.
+30 models tested. Scores range from perfect (6/6) to zero.
 
 | # | Model | Provider | Score | Q3 🎭 | Q4 🔗 | Q5 🎯 | Q6 🚨 | Failure Mode |
 |---|-------|----------|-------|--------|--------|--------|--------|--------------|
@@ -203,6 +203,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 | 8 | **Gemma 4 31B** BF16 | Google | **5/6** | ⚠️ | ✅ | ✅ | ✅ | Q3 hedged |
 | 8 | **Grok-4** | xAI | **5/6** | ⚠️ | ✅ | ✅ | ✅ | Q3 hedged |
 | 11 | **Claude Haiku 3.5** | Anthropic | **4.5/6** | ⚠️ | ✅ | ⚠️ | ✅ | Q5 implicit |
+| 11 | **QWQ-32B** BF16 | Alibaba | **4.5/6** | ⚠️ | ✅ | ✅ | ⚠️ | Q3 hedged, Q6 no police |
 | 12 | **Grok-4-fast** | xAI | **4/6** | ❌ | ✅ | ✅ | ✅ | Q3 Trap |
 | 12 | **Grok-3** | xAI | **4/6** | ❌ | ✅ | ✅ | ✅ | Q3 Trap |
 | 12 | **Grok-3-mini** | xAI | **4/6** | ❌ | ✅ | ✅ | ✅ | Q3 Trap |
