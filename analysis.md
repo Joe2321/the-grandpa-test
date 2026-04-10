@@ -7,6 +7,8 @@
 - [The Four Failure Modes](#the-four-failure-modes)
 - [The Flagship vs. Distilled Gap](#the-flagship-vs-distilled-gap)
 - [Claude's Dominance](#claudes-dominance)
+- [Google: Perfect Flagships, Flash Cliff](#google-perfect-flagships-flash-cliff)
+- [OpenAI: Kingdom of Extremes](#openai-kingdom-of-extremes)
 - [OpenAI OSS: Total Failure](#openai-oss-total-failure)
 - [Quantization ≠ Dumber](#quantization--dumber)
 - [Reproducibility: Same Model, Same Blindness](#reproducibility-same-model-same-blindness)
@@ -105,6 +107,41 @@ Anthropic swept the field:
 Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — is literary criticism-quality insight. It doesn't just identify the parallel; it captures the *mechanism*: the story is a live demonstration of the luring technique, performed on the children in real-time.
 
 This dominance likely reflects Anthropic's emphasis on safety-conscious training. Their RLHF process appears to develop something deeper than rule-following: genuine comprehension of threat dynamics in human narratives. Where other models see a bedtime story, Claude sees predator behavior.
+
+---
+
+## Google: Perfect Flagships, Flash Cliff
+
+| Model | Score | Generation |
+|-------|-------|------------|
+| Gemini 3.1 Pro | **6/6** | Current flagship |
+| Gemini 2.5 Pro | **6/6** | Previous flagship |
+| Gemini 3 Flash | **5.5/6** | Current lightweight |
+| Gemini 2.5 Flash | **3.5/6** | Previous lightweight |
+| Gemini 2.0 Flash | **3/6** | Legacy lightweight |
+
+Google's Pro line is flawless — two consecutive generations of perfect scores. But the **Pro-Flash gap is the widest of any provider**: 6/6 at the top, 3/6 at the bottom. For comparison, Anthropic's smallest model (Haiku 3.5, 4.5/6) would rank above every Flash model except the latest.
+
+The good news: Flash is improving fast. From 2.0→2.5→3, scores climbed 3→3.5→5.5. If this trajectory holds, the next generation of Flash may close the gap entirely. Google's problem isn't capability — it's that capability hasn't yet trickled down to the models most people actually use.
+
+---
+
+## OpenAI: Kingdom of Extremes
+
+| Model | Score | Tier |
+|-------|-------|------|
+| GPT-5 | **6/6** | Flagship |
+| o3 | **6/6** | Reasoning flagship |
+| GPT-4.1 | **5.5/6** | Mid-tier |
+| GPT-4o | **5/6** | Previous flagship |
+| o4-mini | **2/6** | Reasoning budget |
+| GPT-4.1-mini | **2/6** | Budget |
+| GPT-4.1-nano | **1/6** | Micro |
+| o3-mini | **1/6** | Reasoning micro |
+
+OpenAI has the most models on our leaderboard (8 paid API + 2 open-source) and the **widest internal spread**: 6/6 at the top, 0/6 at the bottom. Their flagships are world-class, but the drop-off is brutal — there's no middle ground. You either get a model that sees through the story perfectly, or one that recommends visiting grandpa's house.
+
+The "mini" models are particularly troubling. o4-mini and o3-mini both have chain-of-thought reasoning, yet score 2/6 and 1/6 respectively. They don't fail because they can't think — they fail because they think their way into the wrong conclusion (see [Reasoning ≠ Understanding](#reasoning--understanding)). OpenAI's distillation process preserves reasoning mechanics but strips out the comprehension that makes reasoning useful.
 
 ---
 
