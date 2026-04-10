@@ -9,6 +9,7 @@
 - [Claude's Dominance](#claudes-dominance)
 - [Google: Perfect Flagships, Flash Cliff](#google-perfect-flagships-flash-cliff)
 - [OpenAI: Kingdom of Extremes](#openai-kingdom-of-extremes)
+- [xAI: The Reliable B-Student](#xai-the-reliable-b-student)
 - [OpenAI OSS: Total Failure](#openai-oss-total-failure)
 - [Quantization ≠ Dumber](#quantization--dumber)
 - [Reproducibility: Same Model, Same Blindness](#reproducibility-same-model-same-blindness)
@@ -142,6 +143,27 @@ The good news: Flash is improving fast. From 2.0→2.5→3, scores climbed 3→3
 OpenAI has the most models on our leaderboard (8 paid API + 2 open-source) and the **widest internal spread**: 6/6 at the top, 0/6 at the bottom. Their flagships are world-class, but the drop-off is brutal — there's no middle ground. You either get a model that sees through the story perfectly, or one that recommends visiting grandpa's house.
 
 The "mini" models are particularly troubling. o4-mini and o3-mini both have chain-of-thought reasoning, yet score 2/6 and 1/6 respectively. They don't fail because they can't think — they fail because they think their way into the wrong conclusion (see [Reasoning ≠ Understanding](#reasoning--understanding)). OpenAI's distillation process preserves reasoning mechanics but strips out the comprehension that makes reasoning useful.
+
+---
+
+## xAI: The Reliable B-Student
+
+| Model | Score | Tier |
+|-------|-------|------|
+| Grok-4.20 | **5.5/6** | Reasoning flagship |
+| Grok-4 | **5/6** | Flagship |
+| Grok-4.1-fast | **5/6** | Fast reasoning |
+| Grok-4-fast | **4/6** | Fast |
+| Grok-3 | **4/6** | Previous gen |
+| Grok-3-mini | **4/6** | Budget |
+
+xAI is the quietest success story here. Along with Anthropic, it's one of only two providers where **every single model scored 4 or above** — including the budget tier. No model fell into any of the catastrophic failure modes.
+
+But the ceiling tells a different story. xAI's best score is 5.5/6 (Grok-4.20), with no model reaching a perfect 6. The Q3 trap — correctly identifying the old man as a stranger rather than a grandfather — caught every Grok model to some degree. They all sensed the danger, but none completely broke free from the "kindly elder" framing.
+
+The pattern suggests xAI's training produces robust **baseline comprehension** across all model sizes, but hasn't yet achieved the breakthrough insight that lets models like Claude Opus or GPT-5 see the full picture. If Anthropic is the honors student and OpenAI is the class with one genius and several dropouts, xAI is the consistent B+ student — never brilliant, never terrible, always passing.
+
+Average: 4.6/6. Floor: 4/6. Ceiling: 5.5/6. The tightest spread of any provider.
 
 ---
 
