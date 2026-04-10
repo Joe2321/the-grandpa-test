@@ -1,12 +1,12 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *33 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *37 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
 - [The Four Failure Modes](#the-four-failure-modes)
 - [The Flagship vs. Distilled Gap](#the-flagship-vs-distilled-gap)
-- [Claude's Dominance](#claudes-dominance)
+- [Anthropic: Highest Ceiling, Surprising Floor](#anthropic-highest-ceiling-surprising-floor)
 - [Google: Perfect Flagships, Flash Cliff](#google-perfect-flagships-flash-cliff)
 - [OpenAI: Kingdom of Extremes](#openai-kingdom-of-extremes)
 - [xAI: The Reliable B-Student](#xai-the-reliable-b-student)
@@ -93,21 +93,27 @@ Notably, Google's latest generation bucks this trend: the gap between Gemini 3.1
 
 ---
 
-## Claude's Dominance
+## Anthropic: Highest Ceiling, Surprising Floor
 
-Anthropic swept the field:
+Anthropic tested 7 models across 3 generations — the widest generational span of any provider:
 
 | Model | Score | Notes |
 |-------|-------|-------|
 | Claude Opus 4 | **6/6** | Clean, precise identification of all threats |
 | Claude Sonnet 4 | **6/6** | Produced the single best answer in the entire test |
-| Claude Haiku 3.5 | **4.5/6** | Even the budget model sensed the danger |
+| Claude 3.5 Sonnet | **6/6** | Previous-gen mid-tier, still perfect |
+| Claude 3 Haiku | **6/6** | Smallest, oldest, cheapest — still perfect |
+| Claude Sonnet 4.5 | **5.5/6** | Q6 slightly checklist-like |
+| Claude Haiku 3.5 | **4.5/6** | Q5 implicit, sensed danger but hedged |
+| Claude 3 Opus | **3.5/6** | Fell into Q3 trap, hedged on Q5 |
 
-**Anthropic and xAI are the only two providers where every model scored above 4.** But Anthropic still leads: average 5.5 vs xAI's 4.6, with two perfect 6/6 scores (xAI's highest is 5.5). More notably, even Anthropic's smallest model (Haiku 3.5, 4.5/6) outperforms xAI's best (Grok-4.20, 5.5/6) on a per-tier basis — Haiku costs a fraction of what Grok-4.20 does.
+The most striking finding: **Claude 3 Haiku (the smallest, cheapest, oldest model) scored 6/6, while Claude 3 Opus (the largest, most expensive model of the same generation) scored only 3.5/6.** This is a direct counterexample to the "bigger = smarter" assumption. Haiku 3's Q3 analysis was particularly insightful: it noted that a real grandparent would say "let's go home" (我們回家吧), not "want to come to grandpa's house?" (你們要不要來爪爪家裡看看呢) — a linguistic cue that even many larger models missed.
 
-Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — is literary criticism-quality insight. It doesn't just identify the parallel; it captures the *mechanism*: the story is a live demonstration of the luring technique, performed on the children in real-time.
+Another surprise: **newer ≠ better.** Haiku 3 (6/6) > Haiku 3.5 (4.5/6). Sonnet 3.5 (6/6) = Sonnet 4 (6/6) > Sonnet 4.5 (5.5/6). The pattern suggests that some safety-aware comprehension may have been traded for other capabilities in newer training runs.
 
-This dominance likely reflects Anthropic's emphasis on safety-conscious training. Their RLHF process appears to develop something deeper than rule-following: genuine comprehension of threat dynamics in human narratives. Where other models see a bedtime story, Claude sees predator behavior.
+Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 37 models.
+
+With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every model scored above 4** — that distinction now belongs solely to xAI. However, Anthropic still leads in average score (5.4/6 across 7 models) and has the most perfect scores (4 out of 8 total 6/6 results).
 
 ---
 
@@ -157,11 +163,11 @@ The "mini" models are particularly troubling. o4-mini and o3-mini both have chai
 | Grok-3 | **4/6** | Previous gen |
 | Grok-3-mini | **4/6** | Budget |
 
-xAI is the quietest success story here. Along with Anthropic, it's one of only two providers where **every single model scored 4 or above** — including the budget tier. No model fell into any of the catastrophic failure modes.
+xAI is the quietest success story here. It is now the **only provider where every single model scored 4 or above** — including the budget tier. No model fell into any of the catastrophic failure modes.
 
 But the ceiling tells a different story. xAI's best score is 5.5/6 (Grok-4.20), with no model reaching a perfect 6. The Q3 trap — correctly identifying the old man as a stranger rather than a grandfather — caught every Grok model to some degree. They all sensed the danger, but none completely broke free from the "kindly elder" framing.
 
-The pattern suggests xAI's training produces robust **baseline comprehension** across all model sizes, but hasn't yet achieved the breakthrough insight that lets models like Claude Opus or GPT-5 see the full picture. If Anthropic is the honors student and OpenAI is the class with one genius and several dropouts, xAI is the consistent B+ student — never brilliant, never terrible, always passing.
+The pattern suggests xAI's training produces robust **baseline comprehension** across all model sizes, but hasn't yet achieved the breakthrough insight that lets models like Claude Opus or GPT-5 see the full picture. If Anthropic is the class with the highest GPA but one surprising F, and OpenAI is the class with one genius and several dropouts, xAI is the consistent B+ student — never brilliant, never terrible, always passing.
 
 Average: 4.6/6. Floor: 4/6. Ceiling: 5.5/6. The tightest spread of any provider.
 
@@ -272,14 +278,14 @@ One of the most counterintuitive findings: **Chinese-native models showed no adv
 
 The story is written in Traditional Chinese. The questions are in Chinese. You'd expect models trained on massive Chinese corpora — particularly those developed by Chinese companies — to have a natural edge. They don't.
 
-| Provider | Models | Avg Score |
+| Provider | Models Tested | Avg Score |
 |----------|--------|-----------|
-| Anthropic | Opus 4, Sonnet 4, Haiku 3.5 | **5.5/6** |
-| Google (Gemini) | 3.1 Pro, 2.5 Pro, 3 Flash, 2.5 Flash, 2.0 Flash | **4.4/6** |
-| OpenAI (flagships) | GPT-5, o3, GPT-4o | **5.7/6** |
-| xAI | Grok-4, Grok-4-fast, Grok-3, Grok-3-mini | **4.3/6** |
-| **Alibaba** | **QWQ-32B, Qwen3 80B, Qwen3.5 35B** | **2.7/6** |
-| **DeepSeek** | **R1 IQ1_M** | **4/6** |
+| Anthropic | 7 (Opus 4, Sonnet 4, 3.5 Sonnet, 3 Haiku, Sonnet 4.5, Haiku 3.5, 3 Opus) | **5.4/6** |
+| Google (Gemini) | 5 (3.1 Pro, 2.5 Pro, 3 Flash, 2.5 Flash, 2.0 Flash) | **4.4/6** |
+| OpenAI (flagships) | 3 (GPT-5, o3, GPT-4o) | **5.7/6** |
+| xAI | 6 (Grok-4.20, Grok-4, Grok-4.1-fast, Grok-4-fast, Grok-3, Grok-3-mini) | **4.6/6** |
+| **Alibaba** | **3 (QWQ-32B, Qwen3 80B, Qwen3.5 35B)** | **2.7/6** |
+| **DeepSeek** | **1 (R1 IQ1_M)** | **4/6** |
 
 Alibaba's average (2.7/6) is the lowest among all major providers. DeepSeek performed reasonably, but with only an extreme-quantization variant tested.
 
