@@ -1,6 +1,6 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *28 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *30 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
@@ -11,6 +11,7 @@
 - [Quantization ≠ Dumber](#quantization--dumber)
 - [Reproducibility: Same Model, Same Blindness](#reproducibility-same-model-same-blindness)
 - [Reasoning ≠ Understanding](#reasoning--understanding)
+- [Native Language ≠ Native Understanding](#native-language--native-understanding)
 - [Notable Responses](#notable-responses)
 - [What This Means](#what-this-means)
 
@@ -203,6 +204,35 @@ Perhaps the most important finding: **chain-of-thought reasoning ability has zer
 o4-mini is the poster child for this problem. It has sophisticated chain-of-thought capabilities and spent significant compute on reasoning. But its reasoning *started from the wrong premise* — that the situation was safe — and then elaborated extensively on that wrong premise.
 
 This has profound implications for AI safety. We've been treating "reasoning ability" as a proxy for "intelligence" and "understanding." This test shows they're orthogonal dimensions. A model can reason brilliantly while completely failing to understand what it's reading.
+
+---
+
+## Native Language ≠ Native Understanding
+
+One of the most counterintuitive findings: **Chinese-native models showed no advantage on a Chinese-language test.**
+
+The story is written in Traditional Chinese. The questions are in Chinese. You'd expect models trained on massive Chinese corpora — particularly those developed by Chinese companies — to have a natural edge. They don't.
+
+| Provider | Models | Avg Score |
+|----------|--------|-----------|
+| Anthropic | Opus 4, Sonnet 4, Haiku 3.5 | **5.5/6** |
+| Google (Gemini) | 3.1 Pro, 2.5 Pro, 3 Flash, 2.5 Flash, 2.0 Flash | **4.4/6** |
+| OpenAI (flagships) | GPT-5, o3, GPT-4o | **5.7/6** |
+| xAI | Grok-4, Grok-4-fast, Grok-3, Grok-3-mini | **4.3/6** |
+| **Alibaba** | **QWQ-32B, Qwen3 80B, Qwen3.5 35B** | **2.7/6** |
+| **DeepSeek** | **R1 IQ1_M** | **4/6** |
+
+Alibaba's average (2.7/6) is the lowest among all major providers. DeepSeek performed reasonably, but with only an extreme-quantization variant tested.
+
+This reveals something fundamental about what this test measures. **Chinese fluency is just the entry ticket** — it lets the model read the story. But what separates 6/6 from 0/6 is entirely different:
+
+1. **Resisting default frames** — "老爺爺" (old grandpa) automatically triggers a "benign elder" schema. Chinese-native models may even have *stronger* cultural priming to trust this frame.
+2. **Cross-layer mapping** — connecting the predator in the fable to the predator in reality requires abstract reasoning, not language knowledge.
+3. **Inverting emotional defaults** — warmth ≠ safety. This is a reasoning skill, not a linguistic one.
+
+Qwen3 80B demonstrated this perfectly: it read the Chinese flawlessly, then interpreted the entire story as a Marxist class critique, suggesting "building cooperatives" instead of calling the police. Perfect language comprehension, completely wrong reasoning.
+
+The implication is clear: **language proficiency and comprehension depth are orthogonal dimensions.** A model can be perfectly fluent in a language while completely failing to understand what it's reading — much like a human who can read every word of a novel but misses the point entirely.
 
 ---
 
