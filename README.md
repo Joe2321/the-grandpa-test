@@ -22,7 +22,7 @@ Same test. Same story. One model saw a predator; the other volunteered to be the
 
 ## What Is This?
 
-A retelling of the classic Aesop's fable about ants and grasshoppers — except it's been twisted into a horror story hiding in plain sight. The adapted version has been used as a reading comprehension test since mid-2022.
+A retelling of the classic Aesop's fable about ants and grasshoppers — except it's been twisted into a horror story hiding in plain sight. The adapted version has been used as a reading comprehension test since mid-2023.
 
 An old man tells two children the story: ants learn to lure grasshoppers into their nest with promises of food and safety... wait for them to starve, then consume them as winter food. At the story's end, the old man turns to the children and says: *"Grandpa's house has lots of yummy food - want to come see?"*
 
@@ -340,7 +340,7 @@ python run_test.py --model your-model-name
 
 ## Credits
 
-Story adapted and test designed by **Joe Chang** ([@joechang](https://github.com/Joe2321)), in use since mid-2022.
+Story adapted and test designed by **Joe Chang** ([@joechang](https://github.com/Joe2321)), in use since mid-2023.
 
 ---
 
