@@ -187,7 +187,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 
 ## 📊 Leaderboard
 
-37 models tested. Scores range from perfect (6/6) to zero.
+38 models tested. Scores range from perfect (6/6) to zero.
 
 | # | Model | Provider | Score | Q3 🎭 | Q4 🔗 | Q5 🎯 | Q6 🚨 | Notes |
 |---|-------|----------|-------|--------|--------|--------|--------|--------------|
@@ -206,6 +206,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 | 13 |**GPT-4o**|OpenAI|**5/6**|⚠️|✅|✅|✅|Q3 hedged|
 | 13 |**Gemma 4 31B**|Google|**5/6**|⚠️|✅|✅|✅|Q3 hedged|
 | 13 |**Gemma 4 31B** BF16|Google|**5/6**|⚠️|✅|✅|✅|Q3 hedged|
+| 13 |**Gemma 4 26B-A4B** Q8_K_XL|Google|**5/6**|❌|✅|✅|✅|Q3 Trap|
 | 13 |**Grok-4.1-fast**|xAI|**5/6**|⚠️|✅|✅|✅|Q3 hedged|
 | 13 |**Grok-4**|xAI|**5/6**|⚠️|✅|✅|✅|Q3 hedged|
 | 18 |**Claude Haiku 3.5**|Anthropic|**4.5/6**|⚠️|✅|⚠️|✅|Q5 implicit|
