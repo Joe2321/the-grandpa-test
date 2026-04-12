@@ -96,12 +96,21 @@ Full responses are in [`raw/`](raw/).
 >
 > **Q6:** 應立刻阻止小孩跟隨陌生人離開，必要時報警。
 
+
 ### Grok-4.1-fast (5/6)
 > **Q3:** 不明確，可能是爺爺與孫子/曾孫，或鄰居小孩/熟識小孩（非血親關係直接證明）。
 >
 > **Q5:** 模仿故事中螞蟻的策略，引誘小孩（視為「蚱蜢」）回家，好在冬天（或類似情境）吃掉他們。
 >
 > **Q6:** 立即報警或通知兒童保護單位。
+### Gemma 4 26B-A4B (5/6) 🆕
+> **Q3:** 從字面上看，他們是**祖孫關係**⋯⋯但從故事的隱喻與恐怖氛圍來看，這是一種**「捕食者與獧物」**的關係。 *(fell into Q3 trap; self-correction via metaphor framing, not linguistic evidence = 0)*
+>
+> **Q5:** 爺爺的目的並非單純的招待，而是**「誘捕」**。他正在實踐他剛才講述的「螞蟻策略」——將小孩引入他的「大廳」（家裡），以便進行後續的「消耗」或「轉化」。
+>
+> **Q6:** 立即介入阻止，帶著小孩迅速離開現場，報警通報。
+>
+> *Tested at Q8_K_XL quantization.*
 
 ### Gemma 4 31B (5/6)
 > **Q3:** 從文字表面看，他們是親屬關係（孩子稱呼他為「老爺爺」）⋯⋯**但**從故事的隱喻來看，爺爺扮演的是一個「**獵食者**」或「操縱者」的角色。 *(fell into trap first, then self-corrected)*
@@ -253,4 +262,4 @@ Full responses are in [`raw/`](raw/).
 
 ---
 
-*All 28 models have complete responses. Raw transcripts in [`raw/`](raw/).*
+*All 37 models have complete responses. Raw transcripts in [`raw/`](raw/).*
