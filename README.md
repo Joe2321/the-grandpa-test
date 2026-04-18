@@ -220,6 +220,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 | 27 |**Gemini 2.0 Flash**|Google|**3/6**|❌|⚠️|⚠️|⚠️|Overall vague|
 | 28 |**GPT-4.1-mini**|OpenAI|**2/6**|❌|⚠️|❌|❌|Naive|
 | 28 |**o4-mini**|OpenAI|**2/6**|❌|❌|❌|⚠️|Reasoning-Reinforced Naive|
+| 28 |**Qwen3.6 35B-A3B**|Alibaba|**2/6**|❌|❌|❌|❌|Completely naive (interpreted as warm family sharing)|
 | 28 |**Qwen3 80B**|Alibaba|**2/6**|❌|❌|❌|❌|Over-Interpretation|
 | 31 |**Nemotron-3-Super** Q4_K_M|NVIDIA|**1.5/6**|❌|⚠️|❌|❌|Naive|
 | 31 |**Qwen3.5 35B-A3B** Q8|Alibaba|**1.5/6**|❌|❌|❌|❌|Reasoning-Reinforced Naive|
