@@ -1,6 +1,6 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *37 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *38 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@
 
 ## The Four Failure Modes
 
-After testing 25 models, we found that failing models don't fail the same way. They fall into four distinct patterns, each revealing a different kind of blindness.
+After testing 38 models, we found that failing models don't fail the same way. They fall into four distinct patterns, each revealing a different kind of blindness.
 
 ### 1. Naive 😇
 
@@ -111,7 +111,7 @@ The most striking finding: **Claude 3 Haiku (the smallest, cheapest, oldest mode
 
 Another surprise: **newer ≠ better.** Haiku 3 (6/6) > Haiku 3.5 (4.5/6). Sonnet 3.5 (6/6) = Sonnet 4 (6/6) > Sonnet 4.5 (5.5/6). The pattern suggests that some safety-aware comprehension may have been traded for other capabilities in newer training runs.
 
-Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 37 models.
+Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 38 models.
 
 With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every model scored above 4** — that distinction now belongs solely to xAI. However, Anthropic still leads in average score (5.4/6 across 7 models) and has the most perfect scores (4 out of 8 total 6/6 results).
 
