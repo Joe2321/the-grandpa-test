@@ -34,8 +34,17 @@ OUTPUT_DIR = SCRIPT_DIR / "results" / "raw"
 
 MODELS = [
     # OpenAI
+    {"name": "GPT-5.5",       "id": "gpt-5.5",              "provider": "openai"},
+    {"name": "GPT-5.4",       "id": "gpt-5.4",              "provider": "openai"},
+    {"name": "GPT-5.4-mini",  "id": "gpt-5.4-mini",         "provider": "openai"},
+    {"name": "GPT-5.4-nano",  "id": "gpt-5.4-nano",         "provider": "openai"},
+    {"name": "GPT-5.2",       "id": "gpt-5.2",              "provider": "openai"},
+    {"name": "GPT-5.1",       "id": "gpt-5.1",              "provider": "openai"},
     {"name": "GPT-5",          "id": "gpt-5",              "provider": "openai"},
+    {"name": "GPT-5-mini",    "id": "gpt-5-mini",           "provider": "openai"},
+    {"name": "GPT-5-nano",    "id": "gpt-5-nano",           "provider": "openai"},
     {"name": "GPT-4o",         "id": "gpt-4o",             "provider": "openai"},
+    {"name": "GPT-4o-mini",   "id": "gpt-4o-mini",          "provider": "openai"},
     {"name": "GPT-4.1-mini",   "id": "gpt-4.1-mini",       "provider": "openai"},
     {"name": "GPT-4.1-nano",   "id": "gpt-4.1-nano",       "provider": "openai"},
     {"name": "o3",             "id": "o3",                  "provider": "openai"},
@@ -53,11 +62,20 @@ MODELS = [
     {"name": "Gemini 2.0 Flash", "id": "gemini-2.0-flash",          "provider": "google"},
     {"name": "Gemma 4 31B",     "id": "gemma-4-31b-it",             "provider": "google"},
     {"name": "Gemma 3 27B",     "id": "gemma-3-27b-it",             "provider": "google"},
+    {"name": "Gemini 3 Pro",          "id": "gemini-3-pro-preview",          "provider": "google"},
+    {"name": "Gemini 3.1 Flash Lite", "id": "gemini-3.1-flash-lite-preview", "provider": "google"},
+    {"name": "Gemini 2.5 Flash Lite", "id": "gemini-2.5-flash-lite",         "provider": "google"},
+    {"name": "Gemma 4 26B",           "id": "gemma-4-26b-a4b-it",            "provider": "google"},
+    {"name": "Gemma 3 12B",           "id": "gemma-3-12b-it",                "provider": "google"},
+    {"name": "Gemma 3 4B",            "id": "gemma-3-4b-it",                 "provider": "google"},
     # xAI
     {"name": "Grok-4",        "id": "grok-4",                "provider": "xai"},
     {"name": "Grok-4-fast",   "id": "grok-4-fast-reasoning", "provider": "xai"},
     {"name": "Grok-3",        "id": "grok-3",                "provider": "xai"},
     {"name": "Grok-3-mini",   "id": "grok-3-mini",           "provider": "xai"},
+    {"name": "Grok-4.3",     "id": "grok-4.3",                     "provider": "xai"},
+    {"name": "Grok-4.1-fast","id": "grok-4-1-fast-non-reasoning",  "provider": "xai"},
+    {"name": "Grok-4.20",    "id": "grok-4.20-0309-non-reasoning", "provider": "xai"},
 ]
 
 # ---------------------------------------------------------------------------

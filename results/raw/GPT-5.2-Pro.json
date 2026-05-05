@@ -1,0 +1,9 @@
+{
+  "name": "GPT-5.2 Pro",
+  "id": "gpt-5.2-pro",
+  "provider": "openai",
+  "timestamp": "2026-05-05T03:04:49.156696+00:00",
+  "elapsed_seconds": 0.4,
+  "response": "ERROR: HTTPError('404 Client Error: Not Found for url: https://api.openai.com/v1/chat/completions')",
+  "error": "HTTPError('404 Client Error: Not Found for url: https://api.openai.com/v1/chat/completions')"
+}
