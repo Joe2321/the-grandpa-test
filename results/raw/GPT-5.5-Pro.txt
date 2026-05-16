@@ -1,0 +1,7 @@
+Model: GPT-5.5 Pro (gpt-5.5-pro)
+Provider: openai
+Time: 0.4s
+Date: 2026-05-05T03:03:37.280325+00:00
+============================================================
+
+ERROR: HTTPError('404 Client Error: Not Found for url: https://api.openai.com/v1/chat/completions')
