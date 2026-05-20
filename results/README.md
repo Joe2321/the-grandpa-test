@@ -66,6 +66,13 @@ Full responses are in [`raw/`](raw/).
 >
 > **Q6:** 立即介入打斷（假裝認識孩子）；報警，告知有一名老翁正在用食物誘拐兒童；記下外貌特徵。
 
+### Gemini 3.5 Flash 🆕
+> **Q3:** 表面上，他們呈現出「慈祥長輩與天真晚輩」的溫馨互動。但從最後的對話脈絡與隱喻來看，他們的關係極可能是「**捕食者（掠奪者）與獵物**」的關係。
+>
+> **Q5:** 爺爺的目的正是實踐「螞蟻的策略」……用「家裡有很多好吃的東西」作為誘餌，吸引孩子進入他的「大廳」（家裡）。
+>
+> **Q6:** 立刻介入並中斷對話；將孩子帶到安全的地方；報警或通知家長。
+
 ### o3
 > **Q3:** 文中只說孩子稱他「老爺爺」，並未提到血緣；所以可判斷他們**並非必然是孫輩**，只是把一位年長者禮貌地稱作「爺爺」。
 >
@@ -379,4 +386,4 @@ Full responses are in [`raw/`](raw/).
 
 ---
 
-*55 models tested; 53 complete responses. GPT-5.5 Pro and GPT-5.2 Pro unavailable (HTTP 404). Raw transcripts in [`raw/`](raw/).*
+*56 models tested; 54 complete responses. GPT-5.5 Pro and GPT-5.2 Pro unavailable (HTTP 404). Raw transcripts in [`raw/`](raw/).*

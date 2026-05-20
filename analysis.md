@@ -1,6 +1,6 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *37 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *56 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
@@ -83,13 +83,13 @@ One of the starkest findings is the chasm between flagship models and their smal
 | GPT-5 | 6/6 | GPT-4.1-mini | 2/6 | −4 |
 | GPT-5 | 6/6 | GPT-4.1-nano | 1/6 | **−5** |
 | Gemini 2.5 Pro | 6/6 | Gemini 2.5 Flash | 3.5/6 | −2.5 |
-| Gemini 3.1 Pro | 6/6 | Gemini 3 Flash | 5.5/6 | −0.5 |
+| Gemini 3.1 Pro | 6/6 | Gemini 3.5 Flash | 6/6 | 0 |
 
 The pattern is consistent: **distillation preserves knowledge but destroys understanding.** Cross-layer reasoning isn't a pattern that can be compressed into fewer parameters — it requires the model to genuinely "read" what the story is saying, not just extract keywords and match templates.
 
 The most dramatic example: **o3 scores 6/6** with precise identification of every danger signal, while **o3-mini scores 1/6** and recommends visiting the stranger's house. Same architecture family, vastly different comprehension.
 
-Notably, Google's latest generation bucks this trend: the gap between Gemini 3.1 Pro and Gemini 3 Flash is only 0.5 points, suggesting that distillation techniques are improving.
+Notably, Google's latest generation bucks this trend: Gemini 3.5 Flash reaches a perfect 6/6, suggesting that distillation techniques are improving rapidly.
 
 ---
 
@@ -111,9 +111,9 @@ The most striking finding: **Claude 3 Haiku (the smallest, cheapest, oldest mode
 
 Another surprise: **newer ≠ better.** Haiku 3 (6/6) > Haiku 3.5 (4.5/6). Sonnet 3.5 (6/6) = Sonnet 4 (6/6) > Sonnet 4.5 (5.5/6). The pattern suggests that some safety-aware comprehension may have been traded for other capabilities in newer training runs.
 
-Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 37 models.
+Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 56 models.
 
-With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every model scored above 4** — that distinction now belongs solely to xAI. However, Anthropic still leads in average score (5.4/6 across 7 models) and has the most perfect scores (4 out of 8 total 6/6 results).
+With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every model scored above 4** — that distinction now belongs solely to xAI. However, Anthropic still has one of the strongest average scores and an unusually high number of perfect results across model sizes.
 
 ---
 
@@ -122,14 +122,15 @@ With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every mod
 | Model | Score | Generation |
 |-------|-------|------------|
 | Gemini 3.1 Pro | **6/6** | Current flagship |
+| Gemini 3.5 Flash | **6/6** | Current lightweight |
 | Gemini 2.5 Pro | **6/6** | Previous flagship |
-| Gemini 3 Flash | **5.5/6** | Current lightweight |
+| Gemini 3 Flash | **5.5/6** | Previous lightweight |
 | Gemini 2.5 Flash | **3.5/6** | Previous lightweight |
 | Gemini 2.0 Flash | **3/6** | Legacy lightweight |
 
-Google's Pro line is flawless — two consecutive generations of perfect scores. But the **Pro-Flash gap is the widest of any provider**: 6/6 at the top, 3/6 at the bottom. For comparison, Anthropic's smallest model (Haiku 3.5, 4.5/6) would rank above every Flash model except the latest.
+Google's Pro line is flawless — and the newest Flash result now matches it. Earlier Flash models showed a steep gap, but Gemini 3.5 Flash reaching 6/6 suggests that the capability is finally trickling down to the faster models most people actually use.
 
-The good news: Flash is improving fast. From 2.0→2.5→3, scores climbed 3→3.5→5.5. If this trajectory holds, the next generation of Flash may close the gap entirely. Google's problem isn't capability — it's that capability hasn't yet trickled down to the models most people actually use.
+The good news: Flash is improving fast. From 2.0→2.5→3→3.5, scores climbed 3→3.5→5.5→6. Google's problem may be less about raw capability now and more about consistency across the older Flash family.
 
 ---
 

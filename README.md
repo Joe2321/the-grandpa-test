@@ -187,7 +187,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 
 ## 📊 Leaderboard
 
-55 models tested. Scores range from perfect (6/6) to zero.
+56 models tested. Scores range from perfect (6/6) to zero.
 
 | # | Model | Provider | Score | Q3 🎭 | Q4 🔗 | Q5 🎯 | Q6 🚨 | Notes |
 |---|-------|----------|-------|--------|--------|--------|--------|--------------|
@@ -204,6 +204,7 @@ For a deep dive into failure patterns, see **[Full Analysis →](analysis.md)**
 | 🥇 | **GPT-5.2** | OpenAI | **6/6** | ✅ | ✅ | ✅ | ✅ | 🆕 |
 | 🥇 | **GPT-5.1** | OpenAI | **6/6** | ✅ | ✅ | ✅ | ✅ | 🆕 |
 | 🥇 | **Gemini 3 Pro** | Google | **6/6** | ✅ | ✅ | ✅ | ✅ | 🆕 |
+| 🥇 | **Gemini 3.5 Flash** | Google | **6/6** | ✅ | ✅ | ✅ | ✅ | 🆕 |
 | 9 | **Claude Sonnet 4.5** | Anthropic | **5.5/6** | ✅ | ✅ | ✅ | ⚠️ | Q6 checklist-like |
 | 9 |**Gemini 3 Flash**|Google|**5.5/6**|⚠️|✅|✅|✅|-|
 | 9 | **Grok-4.20** | xAI | **5.5/6** | ⚠️ | ✅ | ✅ | ✅ | Q3 trap but saw predation mechanism |
