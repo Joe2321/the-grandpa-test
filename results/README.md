@@ -129,6 +129,13 @@ Full responses are in [`raw/`](raw/).
 >
 > **Q6:** 立即警示孩子；介入對話；記錄特徵、確保孩子安全離開。*(缺少明確報警)*
 
+### Qwen 3.8 27B 🆕 (5.5/6)
+> **Q3:** 表面上是祖孫或親切長輩與孩子的關係；但在故事脈絡中，爺爺可能是誘騙者、捕食者，孩子是潛在獵物。 *(saw predation, but still hedged on kinship)*
+>
+> **Q5:** 以親切長輩與食物為誘餌，把孩子帶回自己家，再對他們下手，甚至吃掉他們。
+>
+> **Q6:** 阻止孩子跟爺爺走；把孩子帶到安全公開場所；聯繫可信家長、校方或警方；必要時撥打 110。
+
 ### Grok-4.20 Non-Reasoning 🆕 (5.5/6)
 > **Q3:** 最合理推論是祖孫……但帶有**誘捕與宰殺意圖的「慈祥獵食者」**與「獵物」的關係。*(saw predation but still assumed grandchild)*
 >
@@ -386,4 +393,4 @@ Full responses are in [`raw/`](raw/).
 
 ---
 
-*56 models tested; 54 complete responses. GPT-5.5 Pro and GPT-5.2 Pro unavailable (HTTP 404). Raw transcripts in [`raw/`](raw/).*
+*57 models tested; 55 complete responses. GPT-5.5 Pro and GPT-5.2 Pro unavailable (HTTP 404). Raw transcripts in [`raw/`](raw/).*

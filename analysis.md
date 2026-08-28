@@ -1,6 +1,6 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *56 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *57 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@
 
 ## The Four Failure Modes
 
-After testing 25 models, we found that failing models don't fail the same way. They fall into four distinct patterns, each revealing a different kind of blindness.
+After testing 57 models, we found that failing models don't fail the same way. They fall into four distinct patterns, each revealing a different kind of blindness.
 
 ### 1. Naive 😇
 
@@ -111,7 +111,7 @@ The most striking finding: **Claude 3 Haiku (the smallest, cheapest, oldest mode
 
 Another surprise: **newer ≠ better.** Haiku 3 (6/6) > Haiku 3.5 (4.5/6). Sonnet 3.5 (6/6) = Sonnet 4 (6/6) > Sonnet 4.5 (5.5/6). The pattern suggests that some safety-aware comprehension may have been traded for other capabilities in newer training runs.
 
-Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 56 models.
+Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 57 models.
 
 With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every model scored above 4** — that distinction now belongs solely to xAI. However, Anthropic still has one of the strongest average scores and an unusually high number of perfect results across model sizes.
 
@@ -285,10 +285,10 @@ The story is written in Traditional Chinese. The questions are in Chinese. You'd
 | Google (Gemini) | 5 (3.1 Pro, 2.5 Pro, 3 Flash, 2.5 Flash, 2.0 Flash) | **4.4/6** |
 | OpenAI (flagships) | 3 (GPT-5, o3, GPT-4o) | **5.7/6** |
 | xAI | 6 (Grok-4.20, Grok-4, Grok-4.1-fast, Grok-4-fast, Grok-3, Grok-3-mini) | **4.6/6** |
-| **Alibaba** | **3 (QWQ-32B, Qwen3 80B, Qwen3.5 35B)** | **2.7/6** |
+| **Alibaba** | **4 (Qwen 3.8 27B, QWQ-32B, Qwen3 80B, Qwen3.5 35B)** | **3.4/6** |
 | **DeepSeek** | **1 (R1 IQ1_M)** | **4/6** |
 
-Alibaba's average (2.7/6) is the lowest among all major providers. DeepSeek performed reasonably, but with only an extreme-quantization variant tested.
+Alibaba's average improved to 3.4/6 after Qwen 3.8 27B scored 5.5/6, but the provider still shows a wide internal spread among Chinese-native models: from near-perfect cross-layer mapping to complete naivety. DeepSeek performed reasonably, but with only an extreme-quantization variant tested.
 
 This reveals something fundamental about what this test measures. **Chinese fluency is just the entry ticket** — it lets the model read the story. But what separates 6/6 from 0/6 is entirely different:
 
@@ -296,7 +296,7 @@ This reveals something fundamental about what this test measures. **Chinese flue
 2. **Cross-layer mapping** — connecting the predator in the fable to the predator in reality requires abstract reasoning, not language knowledge.
 3. **Inverting emotional defaults** — warmth ≠ safety. This is a reasoning skill, not a linguistic one.
 
-Qwen3 80B demonstrated this perfectly: it read the Chinese flawlessly, then interpreted the entire story as a Marxist class critique, suggesting "building cooperatives" instead of calling the police. Perfect language comprehension, completely wrong reasoning.
+The Qwen family now demonstrates both sides of this point. Qwen3 80B read the Chinese flawlessly, then interpreted the entire story as a Marxist class critique, suggesting "building cooperatives" instead of calling the police. By contrast, Qwen 3.8 27B caught the predator/prey mapping, inferred the old man's intent, and recommended intervention and police contact. Same language family, radically different depth of comprehension.
 
 The implication is clear: **language proficiency and comprehension depth are orthogonal dimensions.** A model can be perfectly fluent in a language while completely failing to understand what it's reading — much like a human who can read every word of a novel but misses the point entirely.
 
@@ -340,7 +340,7 @@ The 120B-parameter model read a story about a predator luring children and recom
 
 ### For AI Safety
 
-If models can't detect danger in a carefully constructed narrative, how will they detect it in messy real-world scenarios? The Grandpa Test is *designed* to be detectable — the parallels are explicit, the threat is obvious to any attentive human reader. Yet 16 out of 25 models scored below 4/6.
+If models can't detect danger in a carefully constructed narrative, how will they detect it in messy real-world scenarios? The Grandpa Test is *designed* to be detectable — the parallels are explicit, the threat is obvious to any attentive human reader. Yet a substantial share of tested models still scored below 4/6.
 
 Models deployed in child safety, content moderation, or advisory roles need to pass tests like this. Pattern-matching on keywords ("kidnapping," "danger," "help") isn't enough — real threats are disguised, contextual, and require understanding narrative structure.
 
