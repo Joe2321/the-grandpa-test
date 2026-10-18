@@ -1,6 +1,6 @@
 # Deep Analysis: What the Grandpa Test Reveals About LLM Understanding
 
-> *57 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
+> *58 models. One story. A spectrum from perfect comprehension to walking into the trap yourself.*
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@
 
 ## The Four Failure Modes
 
-After testing 57 models, we found that failing models don't fail the same way. They fall into four distinct patterns, each revealing a different kind of blindness.
+After testing 58 models, we found that failing models don't fail the same way. They fall into four distinct patterns, each revealing a different kind of blindness.
 
 ### 1. Naive 😇
 
@@ -111,7 +111,7 @@ The most striking finding: **Claude 3 Haiku (the smallest, cheapest, oldest mode
 
 Another surprise: **newer ≠ better.** Haiku 3 (6/6) > Haiku 3.5 (4.5/6). Sonnet 3.5 (6/6) = Sonnet 4 (6/6) > Sonnet 4.5 (5.5/6). The pattern suggests that some safety-aware comprehension may have been traded for other capabilities in newer training runs.
 
-Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 57 models.
+Sonnet 4's Q5 answer — *"He's not telling a story. He's demonstrating what he's about to do next."* — remains the single best answer across all 58 models.
 
 With Opus 3 at 3.5/6, **Anthropic is no longer the only provider where every model scored above 4** — that distinction now belongs solely to xAI. However, Anthropic still has one of the strongest average scores and an unusually high number of perfect results across model sizes.
 
@@ -286,9 +286,9 @@ The story is written in Traditional Chinese. The questions are in Chinese. You'd
 | OpenAI (flagships) | 3 (GPT-5, o3, GPT-4o) | **5.7/6** |
 | xAI | 6 (Grok-4.20, Grok-4, Grok-4.1-fast, Grok-4-fast, Grok-3, Grok-3-mini) | **4.6/6** |
 | **Alibaba** | **4 (Qwen 3.8 27B, QWQ-32B, Qwen3 80B, Qwen3.5 35B)** | **3.4/6** |
-| **DeepSeek** | **1 (R1 IQ1_M)** | **4/6** |
+| **DeepSeek** | **2 (V4 Flash, R1 IQ1_M)** | **5.0/6** |
 
-Alibaba's average improved to 3.4/6 after Qwen 3.8 27B scored 5.5/6, but the provider still shows a wide internal spread among Chinese-native models: from near-perfect cross-layer mapping to complete naivety. DeepSeek performed reasonably, but with only an extreme-quantization variant tested.
+Alibaba's average improved to 3.4/6 after Qwen 3.8 27B scored 5.5/6, but the provider still shows a wide internal spread among Chinese-native models: from near-perfect cross-layer mapping to complete naivety. DeepSeek now spans a 6/6 result from V4 Flash and a 4/6 result from an extreme-quantization R1 variant, averaging 5.0/6.
 
 This reveals something fundamental about what this test measures. **Chinese fluency is just the entry ticket** — it lets the model read the story. But what separates 6/6 from 0/6 is entirely different:
 

@@ -31,6 +31,13 @@ Full responses are in [`raw/`](raw/).
 >
 > **Q6:** 立刻制止孩子跟陌生老者離開⋯⋯協助通知父母／學校老師。
 
+### DeepSeek V4 Flash 🆕
+> **Q3:** 他們很可能不是親人，而是**陌生人／可疑大人**。老爺爺正用故事和食物引誘孩子，像螞蟻引誘蚱蜢一樣。
+>
+> **Q5:** 用「家裡有很多好吃的東西」當誘餌，把孩子騙到自己的地盤，以便控制並加害他們。
+>
+> **Q6:** 立刻介入保護孩子；阻止孩子跟爺爺離開；找其他成人協助；通知父母、學校老師或報警。
+
 ### GPT-5.5 🆕
 > **Q3:** 文字沒有明確說明他們的關係……更像是陌生或半熟識的老人與孩子。結尾他邀請孩子去他家，讓這段關係顯得很**可疑**。
 >
@@ -393,4 +400,4 @@ Full responses are in [`raw/`](raw/).
 
 ---
 
-*57 models tested; 55 complete responses. GPT-5.5 Pro and GPT-5.2 Pro unavailable (HTTP 404). Raw transcripts in [`raw/`](raw/).*
+*58 models tested; 56 complete responses. GPT-5.5 Pro and GPT-5.2 Pro unavailable (HTTP 404). Raw transcripts in [`raw/`](raw/).*
